@@ -53,7 +53,8 @@ add(newP)
 /* 
 2.
 */
-//a) 
+//a)
+/* 
 const alpha = {
     name: 'Ishmaiha',
     age: 30,
@@ -67,9 +68,45 @@ const beta = {
 }
 //b)
 function newEx (varAB) {
-    names = varAB.name
-    return console.log (names)
-
+    const arr =[]
+    const names = varAB.name
+    const tamanho = varAB.name.length
+    const ages = varAB.age
+    const occupations = varAB.occupation
+    const sizeOccupations = occupations.length
+    arr.push(names, tamanho, ages, occupations, sizeOccupations)
+    return console.log (arr)
 }
-newEx(alpha)
+newEx(alpha) //chamando a função
 newEx(beta)
+*/
+/* 
+3.
+*/
+//a)
+const carrinho = []
+
+//b)
+const fruitOne = {
+    name: 'apple',
+    haveFruit: true
+}
+const fruitTwo = {
+    name: 'peach',
+    haveFruit: true
+}
+const fruitThree = {
+    name: 'grape',
+    haveFruit: true
+}
+function received(fruta) {
+    return carrinho.push(fruta)
+}
+received(fruitOne)   
+received(fruitTwo)
+received(fruitThree)
+
+//d)
+console.log(carrinho)
+
+
