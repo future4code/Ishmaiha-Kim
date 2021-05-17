@@ -55,16 +55,28 @@ function retornaQuantidadeElementos (array) {
    return quantidadeArr
 }
 
-//Exercício 6 -
+//Exercício 6 - 
 
 function retornaExpressoesBooleanas() {
-   // implemente sua lógica aqui
+   const booleano1 = true
+   const booleano2 = false
+   const booleano3 = !booleano2 //true
+   const booleano4 = !booleano3 //false
+   const respostas = [booleano1 && booleano2, booleano2 || booleano2, booleano1 && booleano3, !booleano2 && booleano3, booleano1 && !booleano2]
+   return respostas
 }
 
-//Exercício 7 - 
+//Exercício 7 - Escreva uma função que, recebendo um número N como parâmetro, retorne os N primeiros números pares 
+//(por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8).
 
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
+   numerosPares =[]
+   for (let i=0; i < n.length - 1; i++){
+      if (n % 2 === 0){
+         numerosPares.push(n[i])
+      }
+   }
+   return numerosPares
 }
 
 // Exercício 8
