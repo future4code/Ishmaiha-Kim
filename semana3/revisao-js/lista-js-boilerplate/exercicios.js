@@ -1,42 +1,42 @@
 //Exercício 1 - Escreva uma função que recebe um array como parâmetro e retorne este array invertido.
 
 function inverteArray(array) {
-   // newArr = []
-   // for (let i= array.length-1; i >= 0; i--){
-   //   newArr.push(array[i])
-   // }
-   // return newArr
+   const newArr = []
+   for (let i= array.length-1; i >= 0; i--){
+     newArr.push(array[i])
+   }
+   return newArr
 }
 
 //Exercício 2 - Escreva uma função que recebe um array de números e retorna um array com os números pares elevados a 2.
 
 function retornaNumerosParesElevadosADois (array) {
-   // arrParElevado = []
-   // for (let i= 0; i < array.length - 1; i++){
-   //    if (array[i] % 2 === 0){
-   //       arrParElevado.push(array[i]**2)
-   //    }
-   // }
-   // return arrParElevado
+   let arrParElevado = []
+   for (let i= 0; i < array.length; i++){
+      if (array[i] % 2 === 0){
+         arrParElevado.push(array[i]**2)
+      }
+   }
+   return arrParElevado
 }
 
 
 //Exercício 3 - 
 
 function retornaNumerosPares (array) {
-   // const arrPar = []
-   // for (let i =0; i < array.length - 1; i++) {
-   //    if (array[i] % 2 === 0){
-   //       arrPar.push(array[i])
-   //    }
-   // }
-   // return arrPar
+   const arrPar = []
+   for (let i =0; i < array.length; i++) {
+      if (array[i] % 2 === 0){
+         arrPar.push(array[i])
+      }
+   }
+   return arrPar
 }
 
 //Exercício 4
 
 function retornaMaiorNumero(array) {
-   maiorNum = 0
+   let maiorNum = 0
    for (let i =0; i < array.length - 1; i++) {
       if (array[i] > maiorNum){
          maiorNum = array[i]
