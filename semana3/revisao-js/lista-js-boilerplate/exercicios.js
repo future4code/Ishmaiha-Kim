@@ -33,7 +33,7 @@ function retornaNumerosPares (array) {
    return arrPar
 }
 
-//Exercício 4
+//Exercício 4 - Escreva uma função que receba um array de números e retorne o maior número dele.
 
 function retornaMaiorNumero(array) {
    let maiorNum = 0
@@ -45,19 +45,23 @@ function retornaMaiorNumero(array) {
    return maiorNum
 }
 
-//Exercício 5
+//Exercício 5 - Escreva uma função que recebe um array como parâmetro e retorna a quantidade de elementos que há nele.
 
 function retornaQuantidadeElementos (array) {
-   // implemente sua lógica aqui
+   let quantidadeArr = []
+   for (let i =0; i < array.length; i++) {
+     quantidadeArr = array.length
+   }
+   return quantidadeArr
 }
 
-//Exercício 6
+//Exercício 6 -
 
 function retornaExpressoesBooleanas() {
    // implemente sua lógica aqui
 }
 
-//Exercício 7
+//Exercício 7 - 
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
