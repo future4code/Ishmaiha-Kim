@@ -70,9 +70,10 @@ function retornaExpressoesBooleanas() {
 //(por exemplo, se N for 3, você deve imprimir 0, 2 e 4; se N for 5, deve retornar 0, 2, 4, 6 e 8).
 
 function retornaNNumerosPares(n) {
+   let numero
    for (let i=0; i < n; i++){
-      console.log(n*2)
-   }  
+   }
+   return numero*2  
 }
     
 
@@ -92,7 +93,7 @@ function checaTriangulo(a, b, c) {
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
+   
 }
 
 // Exercício 10
