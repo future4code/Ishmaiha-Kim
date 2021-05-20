@@ -138,6 +138,6 @@ div > p {
     padding-top: 250px;
 }
 
-#container-de-descricao > p{
-    display: block;
+table{
+    text-align: center;    
 }
