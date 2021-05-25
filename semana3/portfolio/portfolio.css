@@ -1,0 +1,109 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+
+.back-ground{
+    background-image: url(".//img/paint\ brain.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1200px;
+}
+
+.redes-sociais img{
+    height: 50px;
+    background-repeat: no-repeat;
+    display:block;
+    margin-left: 1000px;
+    margin-top: 10px;
+    display: inline;
+}
+
+.back-ground a{
+    text-align: right;
+    margin-right: 300px;
+    display: block;
+}
+
+.back-ground h1{
+    color: orange;
+    font-size: 200px;
+    margin-left: 850px;
+    display: block;
+}
+
+h2{
+    color:crimson;
+    font-size: 50px;
+    margin-left: 1000px;
+    display: block;
+    margin-top: 100px;
+}
+
+.Menu{
+    background-color:black;
+    height: 100px;
+    text-align: center;
+    padding-top: 80px;
+    word-spacing: 20px;
+    font: italic bold;
+}
+
+.Menu a {
+    color: white;
+    font-size: 30px;
+}
+
+.Menu:active{
+    color:red
+}
+
+.Menu:hover{
+    color: red
+}
+
+.infos-pessoais {
+    background-color:black;
+    height: 100px;
+    text-align: center;
+    padding-top: 80px;
+    word-spacing: 20px;
+    font: italic bold;
+}
+
+.infos-pessoais a {
+    color: white;
+    font-size: 30px;
+}
+
+.imagem-servico{
+    size: 50px;
+    margin: 60px 250px;
+}
+
+.funcoes{
+    display: flex;
+}
+
+.web{
+    color: black;
+    font-size: 20px;
+    padding-left: 250px;
+    
+}
+
+.diet{
+    color: black;
+    font-size: 20px;
+    padding-left: 100px;
+    padding-bottom: 800px;
+}
+
+.consult{
+    color: black;
+    font-size: 20px;
+   padding-left: 50px;
+    
+ 
+}
