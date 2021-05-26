@@ -5,12 +5,18 @@
     padding: 0px;
 }
 
+body{
+  min-height: 100vh; 
+  display:grid;
+  grid-template-rows: 60px 1fr 60px;   
+} 
+
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: orange;
-    height: 80px;
+    padding: 25px 20px 20px 20px;
 }
 
 h2{
@@ -28,7 +34,8 @@ h2{
     grid-template-columns: repeat(4,1fr);
     gap:10px;
     justify-content: space-between;
-    padding: 20px;
+    padding: 5px;
+    margin-top: 60px;  
 }
 
 .video{
@@ -42,12 +49,19 @@ h2{
     box-shadow: 2px 2px 5px darkgray;
 }
 
+.box-video{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    justify-content: space-between;
+}
+
 /*---------- FOOTER-------- */
-.mensagem-footer{
+footer{
     display:flex;
     background-color: orange;
-    height: 50px;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    grid-column: 1/-1;
 }
