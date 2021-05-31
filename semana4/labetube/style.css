@@ -1,0 +1,99 @@
+/*---------- HEADER-------- */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+  min-height: 100vh; 
+  display:grid;
+  grid-template-rows: 60px 1fr 60px;   
+} 
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    padding: 25px 20px 20px 20px;
+}
+
+h2{
+    padding-left: 5px;
+}
+
+#txtBusca{
+    margin-right: 5px;
+}
+
+/*---------- MAIN-------- */
+
+.tela-principal{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 60px;  
+}
+
+.video{
+    align-items: center;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.video img{
+    max-width: 100%;
+    box-shadow: 2px 2px 5px darkgray;
+}
+
+.box-video{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+    justify-content: space-between;
+}
+
+/*---------- FOOTER-------- */
+footer{
+    display:flex;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/-1;
+}
+
+/*---------- MEDIA QUERY-------- */
+@media screen and (min-device-width: 320px) and (max-device-width: 420px){
+    .tela-principal {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        display: flex;
+        position: fixed;
+        min-width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: orange;
+        padding: 25px 20px 20px 20px;
+    }
+
+    footer{
+        display:flex;
+        position: fixed;
+        min-width: 100%;
+        background-color: orange;
+        justify-content: center;
+        align-items: center;
+        bottom:0;
+        width: 100%;
+    }
+
+}
+
+
+    
