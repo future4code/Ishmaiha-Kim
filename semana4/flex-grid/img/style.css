@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    background-color: mediumvioletred;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho{
+    display: flex;
+}
+
+.icone-bolo {
+    padding-top: 13px;
+    padding-left: 7px;
+}
+
+.initial-word{
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+nav{
+    display: flex;
+    padding-left: 10px;
+}
+
+.icone-menu{
+    display: grid;
+    padding-top: 80 px;
+    padding-top: 40px;
+
+}
+
+.link-menu{
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/-1;
+    background-color: mediumvioletred;
+}
