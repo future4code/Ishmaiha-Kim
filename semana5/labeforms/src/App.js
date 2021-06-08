@@ -9,6 +9,9 @@ export default class App extends React.Component{
   state = {
     etapa: 1
  }
+  mudarPagina = () => {
+    this.setState ({etapa: this.state.etapa + 1})
+  }
 
  renderizaEtapa = () => {
     switch (this.state.etapa) {
@@ -22,15 +25,13 @@ export default class App extends React.Component{
         return <Agradecimento />
     }
  }
-  
+
   
   render () {
     return (
       <div className="App">
          {this.renderizaEtapa()}
-         <button>
-           Próxima etapa
-         </button>
+         <button type="button" onClick={this.mudarPagina}>Próxima etapa</button>
       </div>
     )
   }

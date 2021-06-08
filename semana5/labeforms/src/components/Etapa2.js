@@ -5,8 +5,17 @@ export default class segundaPagina extends React.Component {
         return (
             <div>
                 <h1>
-                    Etapa 1 - DADOS GERAIS
+                    Etapa 2 - iNFORMAÇÕES DO ENSINO SUPERIOR
                 </h1>
+                <ol>
+                    <li>Qual curso?</li>
+                    <br></br>
+                    <input type = {Text} value=""/><br></br>
+                    <br></br>
+                    <li>Qual a unidade de ensino?</li><br></br>
+                    <input type = {Text} value=""/><br></br>
+                    <br></br>
+                </ol>
             </div>
         )    
     }
