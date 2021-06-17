@@ -1,0 +1,81 @@
+.cabecalho a{
+    color: tomato;
+}
+
+
+
+h1 {
+    color: silver;
+    display: inline
+}
+
+h2 {
+    color: goldenrod;
+}
+
+p{
+    color:purple;
+}
+
+div{
+    margin: 10px;
+}
+
+.cor-funcionarios{
+    color:yellow;
+}
+
+.cor-estoque{
+    color: violet;
+}
+
+.rodape img{
+    width: 150px;
+    height: 150px;
+    display: inline
+}
+
+.binance img{
+    width: 100px;
+    height: 100px;
+}
+
+.bitcoin img {
+    width: 100px;
+    height: 100px;
+}
+
+.dogecoin img{
+    width: 100px;
+    height: 100px;
+}
+
+.ethereum img{
+    width: 100px;
+    height: 100px;
+}
+
+.shiba img{
+    width: 100px;
+    height: 100px;
+}
+
+.link-foto{
+    color:wheat;
+}
+
+.descricao-produto{
+    color: skyblue;
+}
+
+.preco {
+    color:slategrey;
+}
+
+.quantidade{
+    color:tan;
+}
+
+table{
+    color:khaki;
+}
