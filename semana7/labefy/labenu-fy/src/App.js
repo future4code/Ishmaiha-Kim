@@ -1,64 +1,66 @@
 import React from "react";
 import styled from "styled-components"
 import Playlist from "./components/Playlist";
-import PlaylistCriada from "./components/PlaylistCriada"
+import Personalizado from "./components/Personalizado"
+import { createGlobalStyle } from "styled-components";
+
+const EstiloGlobal = createGlobalStyle`
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: gray;
+  }
+`
 
 const Welcome = styled.h1`
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #000000;
   color: #1ED05D;
-  max-width: 10%;
-  margin: 0 auto;
-  border-radius: 20px;
+  padding: 10px;
+  justify-content: space-between;
 `
-const Botoes = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000000;
-  color: #1ED05D;
+const Pesquisa = styled.input`
   border-radius: 20px;
 `
 
 export default class App extends React.Component {
   state = {
-    telaInicial: "Boas-vindas"
+    telaInicial: "criar"
   }
   
   escolhaDaTela = () => {
     switch (this.state.telaInicial) {
       case "criar":
-        return <PlaylistCriada lista= {this.irParaPlaylist}/>  
-        break;
+        return <Personalizado irParaPlaylist={this.lista}/>  
       case "playlist":
-        return <Playlist criacao={this.irCriarPlaylist}/>
+        return <Playlist suaCara={this.criacao}/>
       default:
         return <div>Página não encontrada</div>
-        break;
     }
   }
 
-
-  irCriarPlaylist = () => {
-    this.setState({telaInicial:"criar"})
-  } 
-  
-  irParaPlaylist = () => {
+  lista = () => {
     this.setState({telaInicial: "playlist"})
-  } 
+  }
+
+  criacao = () => {
+    this.setState ({telaInicial: "criar"})
+  }
 
 
   render () {
     return (
       <div>
+        <EstiloGlobal/>
         <Welcome>
           Labefy
+          <Pesquisa placeholder="Digite aqui.."/>
         </Welcome>
-        {this.telaInicial}
-        <Botoes onClick={this.irCriarPlaylist}>Criar Playlist</Botoes>
-        <Botoes onClick={this.irParaPlaylist}>Playlist de Ishmaiha</Botoes>
+        {this.escolhaDaTela()}
       </div>
     );
   }
