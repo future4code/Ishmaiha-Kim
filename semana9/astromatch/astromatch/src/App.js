@@ -28,6 +28,8 @@ function App() {
     }
   }
   
+  //TESTE TESTE TESTE TESTE TESTE 
+
   return (
     <div>
       {SwitchPage()}
