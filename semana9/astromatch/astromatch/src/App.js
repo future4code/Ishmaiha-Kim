@@ -1,34 +1,41 @@
-import './App.css';
-import React, {useState, useEffect} from "react";
-import Axios from "axios"; 
+
+import React, {useState} from "react";
+import Photo from "./components/PhotoPerfil/Photo.js";
+import Matches from "./components/PaginaMatches/Matches.js";
 import styled from "styled-components";
-import ButtonChangePage from "./components/ButtonChangePage/Change.js";
-import ButtonDislike from "./components/ButtonDislike/Dislike.js";
-import PhotoPerfil from "./components/PhotoPerfil/Photo.js";
-import ButtonLike from "./components/ButtonLike/Like.js";
 
 
-const Header = styled.div`
-  display:flex;
-  justify-content: space-around;
+const ChangePage = styled.button`
+    margin: auto 0;
+    margin-top: 5px;
+    background-color: white;
+    cursor: pointer;
 `
 
 function App() {
+
+  const [firstPage, setFirstPage] = useState (true)
+
+  const handleClick = () => {
+    setFirstPage(!firstPage)
+  }
+
+  const SwitchPage = () => {
+    if (firstPage) {
+        return <Photo/>
+    } else {
+        return <Matches/>
+    }
+  }
+  
   return (
-    <div className="App">
-      <Header>
-        <h2>Astromatch</h2>
-        <ButtonChangePage/>
-      </Header>
-      <PhotoPerfil/>
-
-      
-      <div>
-
-      </div>
-
+    <div>
+      {SwitchPage()}
+      <ChangePage onClick ={handleClick}>Match Page </ChangePage>  
     </div>
+    
   );
+  
 }
 
 export default App;
