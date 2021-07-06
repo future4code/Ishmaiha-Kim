@@ -1,11 +1,10 @@
 import React from "react";
 
-export const LoginPage = () => {
+export const AdminHomePage = () => {
     return (
-      <div className="LoginPage">
+      <div>
         
       </div>
     );
   }
-  
   

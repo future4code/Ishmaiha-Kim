@@ -35,7 +35,7 @@ const TwoButtons = styled.button`
     margin: 0 25px;
 `
 
-function ApplicationFormPage() {
+export const ApplicationFormPage = () => {
     return (
       <div>
             <Title>Inscreva-se!!!</Title>
@@ -58,5 +58,3 @@ function ApplicationFormPage() {
       </div>
     );
   }
-  
-  export default ApplicationFormPage;

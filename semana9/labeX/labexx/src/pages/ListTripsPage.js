@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 
@@ -25,7 +25,12 @@ const Buttons = styled.button`
     margin: 30px 35px;
 `
 
-function ListTripsPage() {
+// const tripOptions = axios.get(
+//     "https://us-central1-missao-newton.cloudfunctions.net/futureX/ishmaiha-kim-molina/populate"
+// )
+//     .then ((res) => )
+
+export const ListTripsPage = () => {
     return (
       <div>
         <Title>Lista de Viagens</Title>
@@ -35,6 +40,7 @@ function ListTripsPage() {
             <p>Planeta: sdasda</p>
             <p>Duração: dsadasda</p>
             <p>Data: dsadasdsa</p>
+            {/* {tripOptions} */}
         </CentralContainer> 
         <TwoButtons>
             <Buttons>Voltar</Buttons>
@@ -44,4 +50,4 @@ function ListTripsPage() {
     );
   }
   
-  export default ListTripsPage;
+  

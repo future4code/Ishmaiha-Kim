@@ -22,7 +22,7 @@ const Buttons = styled.button`
   margin: 5px 35px;
 `
 
-function HomePage() {
+export const Homepage = () => {
     return (
       <div>
         <Title>Welcome to</Title>
@@ -36,4 +36,4 @@ function HomePage() {
     );
   }
   
-  export default HomePage;
+  

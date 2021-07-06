@@ -1,11 +1,10 @@
 import React from "react";
 
-function TripDetailsPage() {
+export const TripDetailsPage = () => {
     return (
-      <div className="TripDetailsPage">
-        
+      <div >
+        {/* <p>oi</p> */}
       </div>
     );
   }
   
-  export default TripDetailsPage;
