@@ -1,10 +1,10 @@
-import {Homepage} from "../pages/Homepage";
-import {ListTripsPage} from "../pages/ListTripsPage";
+import {Homepage} from "../pages/homepage/Homepage";
+import {ListTripsPage} from "../pages/listTrips/ListTripsPage";
 import {ApplicationFormPage} from "../pages/application/ApplicationFormPage";
-import {LoginPage} from "../pages/LoginPage";
-import {TripDetailsPage} from "../pages/TripDetailsPage";
+import {LoginPage} from "../pages/login/LoginPage";
+import {TripDetailsPage} from "../pages/tripDetails/TripDetailsPage";
 import {AdminHomePage} from "../pages/adminHome/AdminHomePage";
-import {CreateTripPage} from "../pages/CreateTripPage";
+import {CreateTripPage} from "../pages/createTrip/CreateTripPage";
 import {Switch, Route, BrowserRouter} from "react-router-dom"
 
 

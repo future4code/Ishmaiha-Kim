@@ -3,7 +3,7 @@ import React from "react";
 export const TripDetailsPage = () => {
     return (
       <div >
-        {/* <p>oi</p> */}
+        detalhes da viagem
       </div>
     );
   }

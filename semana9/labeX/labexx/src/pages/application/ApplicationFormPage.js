@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-
+import { useHistory } from "react-router";
+import axios from "axios";
 
 
 const Title = styled.h2` 
@@ -36,6 +37,53 @@ const TwoButtons = styled.button`
 `
 
 export const ApplicationFormPage = () => {
+
+    const [name, setName] = useState (" ");
+    const [age, setAge] = useState (" ");
+    const [motivation, setMotivation] = useState (" ");
+    const [job, setJob] = useState (" ");
+    
+
+    const history = useHistory ();
+
+    const backToListTrip = () => {
+        history.push ("/trips/list");
+    }
+      
+    const onSubmitApplication = () => {
+        const body = {
+            name: " ",
+            age: " ",
+            applicationText: " ",
+            profession: " ",
+            country: " "
+        }
+        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ishmaiha-kim-molina/trips/NoIFVcOiSgTKTIPVZwXS/apply")
+            .then((res) => {
+                console.log(res.data)
+            }).catch((err) => {
+                console.log(err.res)
+            })
+    };
+
+    const onChangeName = (e) => {
+        setName (e.target.value);
+      }
+
+    const onChangeAge = (e) => {
+        setAge (e.target.value);
+    }
+
+    const onChangeMotivation = (e) => {
+        setMotivation (e.target.value);
+    }
+
+    const onChangeJob = (e) => {
+        setJob (e.target.value);
+    }
+
+
+
     return (
       <div>
             <Title>Inscreva-se!!!</Title>
@@ -44,16 +92,16 @@ export const ApplicationFormPage = () => {
                     <option value="">Escolha uma viagem</option>
                 </Options>
                 <Options>
-                    <option value="country">País de origem</option>
+                    <option value="country">Escolha um país</option>
                 </Options>
-                <Write placeholder="Nome"></Write>
-                <Write placeholder="Idade"></Write>
-                <Write placeholder="Venda seu peixe!"></Write>
-                <Write placeholder="Profissão"></Write>
+                <Write onChange = {onChangeName} placeholder="Nome"></Write>
+                <Write onChange = {onChangeAge} placeholder="Idade"></Write>
+                <Write onChange = {onChangeMotivation} placeholder="Venda seu peixe!"></Write>
+                <Write onChange = {onChangeJob} placeholder="Profissão"></Write>
             </ContainerGeral>
         <Buttons>
-            <TwoButtons>Voltar</TwoButtons>
-            <TwoButtons>Enviar</TwoButtons>
+            <TwoButtons onClick = {backToListTrip} >Go Back </TwoButtons>
+            <TwoButtons onClick = {onSubmitApplication} >Send</TwoButtons>
         </Buttons> 
       </div>
     );
