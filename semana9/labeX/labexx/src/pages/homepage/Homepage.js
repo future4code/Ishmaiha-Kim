@@ -40,7 +40,7 @@ const goToAdminPage = () => {
         <Title>LABE XX</Title>
         <Img src="https://static.poder360.com.br/2021/04/nasa-spacex.jpeg"></Img>
         <ButtonsDiv>
-            <Buttons onClick = {goToListTrip}>Travels</Buttons>
+            <Buttons onClick = {goToListTrip}>See travels</Buttons>
             <Buttons onClick = {goToAdminPage}>Admin page</Buttons>
         </ButtonsDiv>
       </div>

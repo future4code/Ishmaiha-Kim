@@ -30,7 +30,7 @@ const Buttons = styled.button`
 
 export const ListTripsPage = () => {
 
-    const [tripList, setStrips] = useState ([])
+    const [tripList, setTrips] = useState ([])
 
     useEffect (() => {
         getAllTrips()
@@ -40,7 +40,7 @@ export const ListTripsPage = () => {
         axios
         .get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ishmaiha-kim-molina/trips")
         .then((res) => {
-            setStrips(res.data.trips) //trips é o nome da constante em que estão os objetos da API
+            setTrips(res.data.trips) //trips é o nome da constante em que estão os objetos da API
             console.log(res.data.trips)
         })
         .catch ((err) => {
@@ -81,3 +81,5 @@ export const ListTripsPage = () => {
     );
 
 }
+
+

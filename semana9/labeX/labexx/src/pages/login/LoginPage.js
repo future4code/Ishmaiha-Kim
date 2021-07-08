@@ -1,6 +1,25 @@
 import React, {useState} from "react";
 import axios from "axios"
 import { useHistory } from "react-router"; 
+import styled from "styled-components";
+
+const LoginContainer = styled.div` 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+const UserData = styled.input` 
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border-radius: 8px;
+  width: 200px;
+`
+
+const Buttons = styled.button` 
+  margin: 5px;
+  border-radius: 8px;
+`
 
 
 export const LoginPage = () => {
@@ -36,18 +55,16 @@ export const LoginPage = () => {
       })
   }    
   
-  
     return (
-      <div >
-        <input placeholder ="email" type ="email" value = {email} onChange = {onChangeEmail}/>
-
-        <input placeholder ="password" type ="password" value = {password} onChange = {onChangePassword}/>
-
-        <button onClick = {goHome} >Go Back</button>
-
-        <button onClick = {onSubmitLogin} >Enter</button>
-        
-      </div>
+      <LoginContainer >
+        <h2>Login</h2> 
+        <form onSubmit = {onSubmitLogin}>
+          <UserData placeholder ="email" type ="email" value = {email} onChange = {onChangeEmail} required/>
+          <UserData placeholder ="password" type ="password" value = {password} onChange = {onChangePassword} required/>
+          <Buttons>Sign in</Buttons>
+          <Buttons onClick = {goHome} >Return</Buttons>
+        </form>
+      </LoginContainer>
     );
   }
   

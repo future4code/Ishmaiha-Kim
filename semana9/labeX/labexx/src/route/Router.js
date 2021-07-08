@@ -12,14 +12,15 @@ export const Router = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/trips/list">
-                    <ListTripsPage/>
-                </Route>
                 
                 <Route exact path="/">
                     <Homepage/>
                 </Route>
 
+                <Route exact path="/trips/list">
+                    <ListTripsPage/>
+                </Route>
+                
                 <Route exact path="/trips/application">
                     <ApplicationFormPage/>
                 </Route>
