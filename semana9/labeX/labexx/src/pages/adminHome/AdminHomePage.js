@@ -42,8 +42,8 @@ export const AdminHomePage = () => {
     history.push ("/admin/trips/create")
   }
 
-  const logout = () => {
-    history.push ("/login")
+  const goToTripDetails = () => {
+    history.push ("/admin/trips/:id")
   }
 
   const [tripName, setTripName] = useState ([])
@@ -78,7 +78,7 @@ export const AdminHomePage = () => {
         <ButtomContainer>
           <Buttons onClick = {goBack}>Return</Buttons>
           <Buttons onClick = {createTravel}>Create travel</Buttons>
-          <Buttons onClick = {logout}>Logout</Buttons>
+          <Buttons onClick = {goToTripDetails}>Trip Details</Buttons>
         </ButtomContainer>
       </div>
     );

@@ -38,10 +38,11 @@ const TwoButtons = styled.button`
 
 export const ApplicationFormPage = () => {
 
-    const [name, setName] = useState (" ");
-    const [age, setAge] = useState (" ");
-    const [motivation, setMotivation] = useState (" ");
-    const [job, setJob] = useState (" ");
+    const [name, setName] = useState ("")
+    const [age, setAge] = useState ()
+    const [motivation, setMotivation] = useState ("")
+    const [job, setJob] = useState ("")
+    const [country, setCountry] = useState ("")
     
 
     const history = useHistory ();
@@ -52,13 +53,13 @@ export const ApplicationFormPage = () => {
       
     const onSubmitApplication = () => {
         const body = {
-            name: " ",
-            age: " ",
-            applicationText: " ",
-            profession: " ",
-            country: " "
+            name: name,
+            age: age,
+            applicationText: motivation,
+            profession: job,
+            country: country
         }
-        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ishmaiha-kim-molina/trips/NoIFVcOiSgTKTIPVZwXS/apply")
+        axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ishmaiha-kim-molina/trips/NoIFVcOiSgTKTIPVZwXS/apply", body)
             .then((res) => {
                 console.log(res.data)
             }).catch((err) => {
@@ -82,23 +83,28 @@ export const ApplicationFormPage = () => {
         setJob (e.target.value);
     }
 
+    const onChangeCountry = (e) => {
+        setCountry (e.target.value);
+    }
+
 
 
     return (
       <div>
-            <Title>Inscreva-se!!!</Title>
-            <ContainerGeral>
-                <Options>
-                    <option value="">Escolha uma viagem</option>
-                </Options>
-                <Options>
-                    <option value="country">Escolha um país</option>
-                </Options>
-                <Write onChange = {onChangeName} placeholder="Nome"></Write>
-                <Write onChange = {onChangeAge} placeholder="Idade"></Write>
-                <Write onChange = {onChangeMotivation} placeholder="Venda seu peixe!"></Write>
-                <Write onChange = {onChangeJob} placeholder="Profissão"></Write>
-            </ContainerGeral>
+        <Title>Inscreva-se!!!</Title>
+        <ContainerGeral>
+            <Options>
+                <option value="">Escolha uma viagem</option>
+            </Options>
+            <Options>
+                <option value="country">Escolha um país</option>
+            </Options>
+            <Write  onChange = {onChangeName} placeholder="Nome"></Write>
+            <Write  onChange = {onChangeAge} placeholder="Idade"></Write>
+            <Write  onChange = {onChangeMotivation} placeholder="Venda seu peixe!"></Write>
+            <Write  onChange = {onChangeJob} placeholder="Profissão"></Write>
+            <Write  onChange = {onChangeCountry} placeholder="Country"></Write>
+        </ContainerGeral>
         <Buttons>
             <TwoButtons onClick = {backToListTrip} >Go Back </TwoButtons>
             <TwoButtons onClick = {onSubmitApplication} >Send</TwoButtons>

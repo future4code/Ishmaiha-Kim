@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import axios from "axios"
+import axios from "axios";
 import { useHistory } from "react-router"; 
 import styled from "styled-components";
 
@@ -21,20 +21,19 @@ const Buttons = styled.button`
   border-radius: 8px;
 `
 
-
 export const LoginPage = () => {
 
   const history = useHistory();
 
-  const [email, setEmail] = useState (" ")
-  const [password, setPassword] = useState (" ")
+  const [email, setEmail] = useState ("")
+  const [password, setPassword] = useState ("")
 
   const onChangeEmail = (e) => {
-    setEmail (e.target.value);
+    setEmail(e.target.value);
   }
 
   const onChangePassword = (e) => {
-    setPassword (e.target.value);
+    setPassword(e.target.value);
   }
 
   const goHome = () => {
@@ -43,27 +42,43 @@ export const LoginPage = () => {
 
   const onSubmitLogin = () => {
     const body = {
-      email: email,
+      email: email, //o primeiro "email" é da API e o segundo "email" é do estado
       password: password
-    }    
-    axios.post ("https://us-central1-labenu-apis.cloudfunctions.net/labeX/ishmaiha-kim-molina/login")
+    }
+    history.push ("/admin/trips/list")
+ 
+    axios.post ("https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/login", body)
       .then ((res) => {
         console.log("voilá", res.data)
       })
       .catch ((err) => {
-        console.log("errou", err.response)
+        console.log("errou", err.res)
       })
-  }    
+
+    
+  }  
   
     return (
       <LoginContainer >
         <h2>Login</h2> 
-        <form onSubmit = {onSubmitLogin}>
-          <UserData placeholder ="email" type ="email" value = {email} onChange = {onChangeEmail} required/>
-          <UserData placeholder ="password" type ="password" value = {password} onChange = {onChangePassword} required/>
-          <Buttons>Sign in</Buttons>
+        
+          <UserData 
+          placeholder = "email" 
+          type = "email" 
+          value = {email} 
+          onChange = {onChangeEmail} 
+          // required
+          />
+          <UserData 
+          placeholder = "password" 
+          type = "password" 
+          value = {password} 
+          onChange = {onChangePassword} 
+          // required
+          />
+          <Buttons onClick = {onSubmitLogin} >Sign in</Buttons>
           <Buttons onClick = {goHome} >Return</Buttons>
-        </form>
+        
       </LoginContainer>
     );
   }
