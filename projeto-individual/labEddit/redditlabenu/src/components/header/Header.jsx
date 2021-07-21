@@ -1,24 +1,23 @@
 import React from "react"
 import styled  from "styled-components"
 
+
 const HeaderContainer = styled.div` 
-    margin: 0 auto; 
+    color: white;
     background-color: #FF4500;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
 `
 
-const ButtonContainer = styled.div` 
-    display: flex;
-    justify-content:space-between;
-   
-   
-`
 export const Header = () => {
     return (
         <HeaderContainer>
-            <ButtonContainer>
-                <button>Login</button>
-                <button>Sign In</button>
-            </ButtonContainer>
+            <div>
+                <h2> LAB EDDIT </h2>
+            </div>
         </HeaderContainer> 
         
     )

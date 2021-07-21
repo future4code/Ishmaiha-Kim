@@ -1,4 +1,8 @@
 import React from "react";
+import { CardPost } from "../../components/CardPost/CardPost";
+import styled from "styled-components";
+
+
 
 export const FeedPage = () => {
   return (
@@ -8,9 +12,7 @@ export const FeedPage = () => {
         <button>Post</button>
       </div>
 
-      <div>
-        
-      </div>
+      <CardPost />
     </div>
   );
 }

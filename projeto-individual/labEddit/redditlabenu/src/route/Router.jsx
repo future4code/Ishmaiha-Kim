@@ -1,10 +1,10 @@
 import React from "react"
-import { Header } from "../components/header/Header"
-import { FeedPage } from "../pages/feedpage/FeedPage"
+import { Header } from "../components/Header/Header"
+import { FeedPage } from "../pages/FeedPage/FeedPage"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import { Login } from "../pages/login/Login"
-import { Register } from "../pages/register/Register"
-import { Posts } from "../pages/posts/Posts"
+import { Login } from "../pages/LoginPage/LoginPage"
+import { Register } from "../pages/RegisterPage/RegisterPage"
+import { Posts } from "../pages/PostsPage/PostsPage"
 
 
 
