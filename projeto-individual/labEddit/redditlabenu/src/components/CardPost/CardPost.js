@@ -1,41 +1,64 @@
 import React from "react";
 import { BsArrowUp } from "react-icons/bs"
 import { AiOutlineArrowDown } from "react-icons/ai"
+import styled from "styled-components";
 
-export const CardPost = () => {
+const Title = styled.h3` 
+    color: #ED4333;
+`
+
+const Content = styled.p`
+    color: black;
+`
+
+const CardContainerGeral = styled.div`
+    margin: 15px;
+    border: 1px solid black;
+    width: 50%;
+    padding: 5px;
+`
+
+const ContainerFooter = styled.div`
+    display: flex; 
+`
+
+const LikeContainer = styled.div` 
+    display:flex;
+`
+
+const CommentContainer = styled.div` 
+    display:flex;
+    margin-left: 10px;
+`
+
+export const CardPost = (props) => {
   return (
-    <div>
+    <CardContainerGeral>
         <div>
-            <h3>Nome de usuário</h3>
+            <Title>{props.title}</Title>
         </div>
 
         <div>
-            <p>
-            Lorem Ipsum is simply dummy text of the printing and 
-            typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text 
-            ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled 
-            it to make a type specimen book. 
-            It has survived not only five centuries, 
-            but also the leap into electronic typesetting, 
-            remaining essentially unchanged. 
-            </p>
+            <Content>
+            {props.body}
+            </Content>
         </div>
 
-        <div>
-            <div>
+        <ContainerFooter>
+            <LikeContainer>
                 <BsArrowUp/>
                 <p>0</p>
                 <AiOutlineArrowDown/>
-            </div>
+            </LikeContainer>
 
-            <div>
+            <CommentContainer>
+                <p>0</p>
                 <p>comentarios</p>
-            </div>
-        </div>        
+            </CommentContainer>
+
+        </ContainerFooter>        
         
 
-    </div>
+    </CardContainerGeral>
   );
 }

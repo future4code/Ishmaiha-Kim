@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import { UseUnprotectedPage } from "../../hooks/UseUnprotectedPage";
 
 
 
 export const Register = () => {
+  UseUnprotectedPage()
   return (
     <div>
       <input placeholder= "Username"/>

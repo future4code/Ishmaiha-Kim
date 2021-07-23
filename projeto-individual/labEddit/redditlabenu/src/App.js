@@ -1,11 +1,16 @@
 import React from "react";
 import { Router } from "../src/route/Router"
+import { Header } from "../src/components/Header/Header"
+import { BrowserRouter } from "react-router-dom"
 
 
 function App() {
   return (
     <div >
-      <Router />
+      <BrowserRouter>
+        <Header/>
+        <Router />
+      </BrowserRouter>
     </div >
   );
 }
