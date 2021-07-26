@@ -10,6 +10,10 @@ export const FeedPage = () => {
   useProtectedPage()
   const history = useHistory()
   const posts = useRequestData([], `${baseURL}/posts`)
+
+  const onClickCard = (id) => {
+    history.push('/Posts/:id/comments')
+  }
  
 
   const postCard = posts.map((posts) => {
@@ -18,18 +22,19 @@ export const FeedPage = () => {
         key={posts.id}
         title={posts.title}
         body={posts.body}
+        onClick={() => onClickCard(posts.id)}
       />)
   })
 
-  const goToPostsPage = () => {  
-    history.push ("/Posts")
+  const publishPost = () => {  
+    history.push ("/FeedPage")
   }
 
   return (
     <div>
       <div>
         <input placeholder="What are you thinking?"/>
-        <button onClick ={goToPostsPage}>Post</button>
+        <button onClick ={publishPost}>Post</button>
       </div>
       
       {postCard}

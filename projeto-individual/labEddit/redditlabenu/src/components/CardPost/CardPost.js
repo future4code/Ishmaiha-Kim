@@ -33,7 +33,7 @@ const CommentContainer = styled.div`
 
 export const CardPost = (props) => {
   return (
-    <CardContainerGeral>
+    <CardContainerGeral onClick={props.onClick}>
         <div>
             <Title>{props.title}</Title>
         </div>
