@@ -1,0 +1,1 @@
+export const demo_pass = "demo.password"
