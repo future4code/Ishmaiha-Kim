@@ -1,0 +1,12 @@
+{
+  "name": "exercicio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex2.js",
+  "scripts": {
+    "add": "clear && node ../src/exercicio2/ex2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
