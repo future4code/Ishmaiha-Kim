@@ -4,8 +4,8 @@
 //b)
 function obterEstatisticas(numeros: number[]) {
 
-    const numerosOrdenados: number[] = numeros.sort(
-        (a:number, b:number) => a - b
+    const numerosOrdenados = numeros.sort(
+        (a, b) => a - b
     )
 
     let soma: number = 0
