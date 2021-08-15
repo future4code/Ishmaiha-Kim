@@ -1,77 +1,75 @@
-export type Users = {
-    cpf: number,
-    name: string,
-    birthdayYear: number,
-    // transactions: Statement
-}
-
 export type Statement = {
     amount: number,
-    date: any,
-    description: string,
-    balance: number
+    date: Date,
+    description: string
 }
 
-export const userBalance: Statement[] = [
-    {
-        amount: 222222,
-        date: "",
-        description: "Pagamento fatura nubank",
-        balance: 123
-    }
-]
+export type Users = {
+    cpf: string,
+    name: string,
+    birthdayYear: Date,
+    balance: number,
+    statement: Statement[]
+}
 
 export let user: Users[] = [
     {
-        cpf: 111,
+        cpf: "111",
         name: "Elias",
-        birthdayYear: 1994,
-        // transactions: 
+        birthdayYear: new Date('10-06-2014'),
+        balance: 0,
+        statement: []
     },
 
     {
-        cpf: 222,
+        cpf: "222",
         name: "Rafael",
-        birthdayYear: 2007,
-        // transactions: []
+        birthdayYear: new Date('10-12-2014'),
+        balance: 0,
+        statement: []
     },
 
     {
-        cpf: 333,
+        cpf: "333",
         name: "Joao",
-        birthdayYear: 2010,
-        // transactions: []
+        birthdayYear: new Date('10-06-2015'),
+        balance: 0,
+        statement: []
     },
 
     {
-        cpf: 444,
+        cpf: "444",
         name: "Lucas",
-        birthdayYear: 1990,
-        // transactions: []
+        birthdayYear: new Date('12-06-2014'),
+        balance: 0,
+        statement: []
+        
     },
 
     {
-        cpf: 555,
+        cpf: "555",
         name: "Maria",
-        birthdayYear: 2012,
-        // transactions: []
+        birthdayYear: new Date('10-03-2014'),
+        balance: 0,
+        statement: []
+         
     },
 
     {
-        cpf: 666,
+        cpf: "666",
         name: "Luana",
-        birthdayYear: 2009,
-        // transactions: []
+        birthdayYear: new Date('01-06-2014'),
+        balance: 0,
+        statement: []
+        
     },
 
     {
-        cpf: 777,
+        cpf: "777",
         name: "Ester",
-        birthdayYear: 2004,
-        // transactions: []
+        birthdayYear: new Date('02-06-2014'),
+        balance: 0,
+        statement: []
+        
     }
 ]
-
-
-
-
