@@ -1,4 +1,4 @@
-### Exercício 1
+### Exercício 01
 a. 
 Quando usamos o "raw" a query retorna as informações exatamente do mesmo
 modo que o MySQL retorna. Por isso se utiliza o result[0][0]; para que ele retorna 
@@ -11,7 +11,7 @@ const getActorByName = async (name: string): Promise<any> => {
         WHERE name = '${name}'
     `);
 
-    return result[0]
+    return result[0][0]
 }
 
 c. 
@@ -21,11 +21,11 @@ const countActorsByGender = async (gender: string): Promise<any> => {
         WHERE gender = '${gender}'
     `);
     
-    actors = result[0].count
+    const actors = result[0][0].count
     return actors
 }
 
-### Exercício 2
+### Exercício 02
 a.
 const updateActorSalary = async (
     id: string, 
@@ -40,14 +40,6 @@ const updateActorSalary = async (
             })     
     }
 
-updateActorSalary("002", 123456)
-.then(result => {
-  console.log(result)
-})
-.catch(err => {
-  console.log(err)
-});
-
 b.
 const deleteActor = async (
     id: string
@@ -60,13 +52,6 @@ const deleteActor = async (
     return result [0]
 }
 
-deleteActor("002")
-.then(result => {
-  console.log(result)
-})
-.catch(err => {
-  console.log(err)
-});
 
 c. 
 const average = async (
@@ -81,15 +66,7 @@ const average = async (
     return result [0]
 }
 
-average("female")
-.then(result => {
-  console.log(result)
-})
-.catch(err => {
-  console.log(err)
-});
-
-### Exercício 3
+### Exercício 03
 a. 
 app.get("/actor/:id", async (req: Request, res: Response) => {
   try {
@@ -105,3 +82,42 @@ app.get("/actor/:id", async (req: Request, res: Response) => {
 });
 
 b. 
+app.get("/actor?gender=gender", async (req: Request, res: Response) => {
+  let codeError = 400
+  try {
+    const count = await countActorsByGender(req.query.gender as string) 
+    res.status(200).send(count)
+  } catch (err){
+    res.status(codeError).send(err)
+  }
+})
+
+### Exercício 04
+a.
+app.put("/actor", async (req: Request, res: Response) => {
+  try {
+    const salary = await updateActorSalary(
+      req.body.id,
+      req.body.salary
+    );
+
+    res.status(200).send(salary);
+  } catch (err) {
+    res.status(400).send({
+      message: err.message,
+    });
+  }
+});
+
+b. 
+app.delete("/actor/:id", async (req: Request, res: Response) => {
+  try {
+    await deleteActor(
+      req.params.id
+    );
+  } catch (err) {
+    res.status(400).send({
+      message: err.message,
+    });
+  }
+});
