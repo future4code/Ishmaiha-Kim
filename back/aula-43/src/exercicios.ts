@@ -23,11 +23,11 @@ app.get("./countries", (req:Request, res:Response) => {
 app.get("./countries/:id", (req:Request, res:Response) => {
      const result: country | undefined = countries.find(
          country => country.id === Number(req.params.id)
-     )
+     )//Para cada país me retorne o ID do country que seja igual ao id
      if (result){
          res.status(200).send(result)
      } else {
-         res.status(400).send("Error")
+         res.status(404).send("Error")
      }
     
 })
@@ -88,6 +88,6 @@ app.post("./countries/:id", (req:Request, res:Response) => {
 }) 
 
 
-app.listen(3003, () => {
-    console.log("Server is running in http://localhost:3003");
+app.listen(3004, () => {
+    console.log("Server is running in http://localhost:3004");
 });

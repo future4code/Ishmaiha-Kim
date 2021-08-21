@@ -3,8 +3,8 @@
    "version": "1.0.0",
    "main": "index.js",
    "scripts": {
-      "start": "tsc && node build/index.js",
-      "dev-start":"tsnd --transpile-only --ignore-watch node_modules ./src/index.ts"
+      "start": "tsc && node build/exercicios.js",
+      "dev-start":"tsnd --transpile-only --ignore-watch node_modules ./src/exercicios.ts"
    },
    "license": "ISC",
    "devDependencies": {
