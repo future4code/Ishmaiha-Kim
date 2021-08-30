@@ -1,4 +1,4 @@
-import { UserAccount } from "./type"
+import { UserAccount } from "./index"
 
 class Bank {
     private accounts: UserAccount[];

@@ -16,7 +16,7 @@ O construtor é um método especial para criar e inicializar um objeto criado a 
 Para chamar o constructor basta referenciar os atributos contidos na class com a palavra chave "this" e atribuir os valoes do constructor nela.
 */
 //b. 
-class UserAccount {
+export class UserAccount {
    private cpf: string;
    private name: string;
    private age: number;
