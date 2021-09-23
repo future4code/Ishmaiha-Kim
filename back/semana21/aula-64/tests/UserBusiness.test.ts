@@ -247,10 +247,6 @@ describe("GetUserById", () => {
     expect.assertions(2)
     const userDB = new UserDatabaseMock();
     
-    (userDB.getUserById as any).mockImplementation(async(): Promise<any> => {
-      return undefined
-    });
-    
     const businessMock = new UserBusiness(
       userDB as UserDatabase,
       new IdGeneratorMock(),

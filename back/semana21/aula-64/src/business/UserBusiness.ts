@@ -116,6 +116,7 @@ export class UserBusiness {
       }
 
     } catch (error){
+      throw new CustomError (error.statusCode, error.message)
     }
   }
 }
